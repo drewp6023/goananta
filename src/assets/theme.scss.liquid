@@ -5930,12 +5930,64 @@ $toolbar-height-small: 46px;
 }
 
 /*================ Ananta Custom ================*/
+
+#section--social-media {
+  width: 100%;
+  height: 50px;
+  background-color: #393D50;
+  border-top: 1px solid #99A9B5;
+  border-bottom: 1px solid #99A9B5;
+}
+
+.search-header__input, 
+.search-bar__input {
+  color: $ananta-light-gray;
+}
+
 .site-header {
   background-color: $ananta-gray;
 }
 
-.site-nav {
-  a {
+.site-header__icons-wrapper {
+  margin-right: 0;
+}
+
+.site-header__icons-wrapper {
+  input::placeholder {
     color: $ananta-light-gray;
+  }
+  input::-webkit-input-placeholder {
+    color: $ananta-light-gray;
+  }
+  input::-ms-input-placeholder {
+    color: $ananta-light-gray;
+  }
+  input::-moz-placeholder {
+    color: $ananta-light-gray;
+  }  
+
+  button,
+  a {
+    color: #eee;
+  }
+}
+
+.site-nav {
+  li {
+    a {
+      color: $ananta-light-gray;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    &.site-nav--active {
+      border: 2px solid white;
+    }
+  }
+}
+
+#contact_form {
+  input {
+    background-color: #F4F6F7;
   }
 }

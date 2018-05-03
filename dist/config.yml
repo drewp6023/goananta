@@ -14,9 +14,9 @@
 ---
 
 development:
-  password: 3a8c5f7c25b42381cb973597974ab0ec
-  theme_id: 13958447140
-  store: ananta-test.myshopify.com
+  password: 6705ebdd422852e22b3b4a20bcf9885a
+  theme_id: 16136437819
+  store: goananta.myshopify.com
   ignore_files:
     #- settings_data.json # Uncomment this line to avoid resetting theme settings
 
