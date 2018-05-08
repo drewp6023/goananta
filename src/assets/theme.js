@@ -1029,7 +1029,7 @@ theme.MobileNav = (function() {
 
   function openMobileNav() {
     var translateHeaderHeight =
-      cache.$siteHeader.outerHeight() + cache.$siteHeader.position().top;
+      $(window).scrollTop() + (cache.$siteHeader.outerHeight() + cache.$siteHeader.position().top);
 
     cache.$mobileNavContainer.prepareTransition().addClass(classes.navOpen);
 
@@ -1037,18 +1037,18 @@ theme.MobileNav = (function() {
       transform: 'translateY(' + translateHeaderHeight + 'px)'
     });
 
-    cache.$pageContainer.css({
-      transform:
-        'translate3d(0, ' + cache.$mobileNavContainer[0].scrollHeight + 'px, 0)'
-    });
+    // cache.$pageContainer.css({
+    //   transform:
+    //     'translate3d(0, ' + cache.$mobileNavContainer[0].scrollHeight + 'px, 0)'
+    // });
 
-    slate.a11y.trapFocus({
-      $container: cache.$sectionHeader,
-      $elementToFocus: cache.$mobileNav
-        .find('.' + classes.navLinkWrapper + ':first')
-        .find('.' + classes.navLink),
-      namespace: 'navFocus'
-    });
+    // slate.a11y.trapFocus({
+    //   $container: cache.$sectionHeader,
+    //   $elementToFocus: cache.$mobileNav
+    //     .find('.' + classes.navLinkWrapper + ':first')
+    //     .find('.' + classes.navLink),
+    //   namespace: 'navFocus'
+    // });
 
     cache.$mobileNavToggle
       .addClass(classes.mobileNavCloseIcon)
@@ -1093,7 +1093,7 @@ theme.MobileNav = (function() {
 
     $(window).off('keyup.mobileNav');
 
-    scrollTo(0, 0);
+    // scrollTo(0, 0);
   }
 
   function toggleSubNav(evt) {

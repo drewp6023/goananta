@@ -64,11 +64,23 @@ var myAppJavaScript = function($){
 
 	        if ($window.scrollTop() >= 50)
 	        {
-	            $('header').css('top', '0');
+	            $('header').css({
+	            	'opacity': '0.9',
+	            	'position': 'fixed',
+	            	'top': '0',
+	            	'z-index': '100',
+	            	'display': ''
+	            });
 	        }
 	        else if (($('#section--social-media').height() - $window.scrollTop()) > 0)
 	        {
-	            $('header').css('top', ($('#section--social-media').height() - $window.scrollTop()) + 'px');
+	            // $('header').css('top', ($('#section--social-media').height() - $window.scrollTop()) + 'px');
+	            $('header').css({
+	            	'opacity': '1',
+	            	'display': 'block',
+	            	'position': '',
+	            	'top': ''
+	            });
 	        }
 	    }	    
 	});
