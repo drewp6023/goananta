@@ -5937,6 +5937,29 @@ $toolbar-height-small: 46px;
   background-color: #393D50;
   border-top: 1px solid #99A9B5;
   border-bottom: 1px solid #99A9B5;
+
+  .social-media__container {
+    width: auto;
+    height: 100%;
+    float: right;
+
+    .social-media__container--flex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+      i {
+        cursor: pointer;
+        color: #99a9b5;
+        padding: 0 7px;
+
+        &:hover {
+          color: #ffffff;
+        }
+      }
+    }
+  }
 }
 
 .search-header__input, 
@@ -5986,8 +6009,38 @@ $toolbar-height-small: 46px;
   }
 }
 
-#contact_form {
-  input {
-    background-color: #F4F6F7;
+#contact-page {
+  
+  .section-header {
+    h1 {
+      margin-top: 17.5px;
+    }
   }
+
+  #address-container {
+    padding: 30px;
+    background-color: #F4F6F7;
+    border: 1px solid #cdcfd3;
+  }
+
+  #contact_form {
+    input,
+    textarea {
+      background-color: #F4F6F7;
+    }
+  }  
+}
+
+.google-maps {
+  position: relative;
+  padding-bottom: 100%; // This is the aspect ratio
+  height: 0;
+  overflow: hidden;
+}
+.google-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
 }
