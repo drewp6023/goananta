@@ -51,6 +51,10 @@ var myAppJavaScript = function($){
 
 	// $('body').append('<p>Your app is using jQuery version '+$.fn.jquery+'</p>');
 
+	/////////////////////////////////
+	// BEGIN - STICKY NAVBARS
+	/////////////////////////////////
+
 	var did_scroll = false,
 	    $window = $(window),
 	    megamenu_distance = $('header').offset().top; // The default position of the navbar
@@ -85,21 +89,24 @@ var myAppJavaScript = function($){
 	    }	    
 	});
 
-	// setInterval(function () {
-	//     if (did_scroll)
-	//     {
-	//         did_scroll = false;
+	/////////////////////////////////
+	// END - STICKY NAVBARS
+	/////////////////////////////////
 
-	//         if ($window.scrollTop() >= 50)
-	//         {
-	//             $('header').css('top', '0');
-	//         }
-	//         else if (($('#section--social-media').height() - $window.scrollTop()) > 0)
-	//         {
-	//             $('header').css('top', ($('#section--social-media').height() - $window.scrollTop()) + 'px');
-	//         }
-	//     }
-	// }, 250);
+
+	/////////////////////////////////
+	// BEGIN - SCROLL TO TOP BUTTON
+	/////////////////////////////////
+
+	$('a.scroll-top-button').click(function() {
+		$('html, body').animate({scrollTop: 0}, 'slow');
+		return false;
+	});
+
+	/////////////////////////////////
+	// END - SCROLL TO TOP BUTTON
+	/////////////////////////////////
+
 };
 
 /* If jQuery has not yet been loaded or if it has but it's too old for our needs,
