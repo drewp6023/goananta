@@ -55,38 +55,43 @@ var myAppJavaScript = function($){
 	// BEGIN - STICKY NAVBARS
 	/////////////////////////////////
 
-	var did_scroll = false,
-	    $window = $(window),
-	    megamenu_distance = $('header').offset().top; // The default position of the navbar
+	// var did_scroll = false,
+	//     $window = $(window),
+	//     megamenu_distance = $('header').offset().top; // The default position of the navbar
 
-	$window.scroll(function (event) {
-	    did_scroll = true;
+	// $window.scroll(function (event) {
+	//     did_scroll = true;
 
-	    if (did_scroll)
-	    {
-	        did_scroll = false;
+	//     if (did_scroll)
+	//     {
+	//         did_scroll = false;
 
-	        if ($window.scrollTop() >= 50)
-	        {
-	            $('header').css({
-	            	'opacity': '0.9',
-	            	'position': 'fixed',
-	            	'top': '0',
-	            	'z-index': '100',
-	            	'display': ''
-	            });
-	        }
-	        else if (($('#section--social-media').height() - $window.scrollTop()) > 0)
-	        {
-	            // $('header').css('top', ($('#section--social-media').height() - $window.scrollTop()) + 'px');
-	            $('header').css({
-	            	'opacity': '1',
-	            	'display': 'block',
-	            	'position': '',
-	            	'top': ''
-	            });
-	        }
-	    }	    
+	//         if ($window.scrollTop() >= 50)
+	//         {
+	//             $('header').css({
+	//             	'opacity': '0.9',
+	//             	'position': 'fixed',
+	//             	'top': '0',
+	//             	'z-index': '100',
+	//             	'display': ''
+	//             });
+	//         }
+	//         else if (($('#section--social-media').height() - $window.scrollTop()) > 0)
+	//         {
+	//             // $('header').css('top', ($('#section--social-media').height() - $window.scrollTop()) + 'px');
+	//             $('header').css({
+	//             	'opacity': '1',
+	//             	'display': 'block',
+	//             	'position': '',
+	//             	'top': ''
+	//             });
+	//         }
+	//     }	    
+	// });
+
+	$("header").sticky({
+		topSpacing: 0,
+		className: 'bring-to-front'
 	});
 
 	/////////////////////////////////
