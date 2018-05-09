@@ -107,6 +107,10 @@ var myAppJavaScript = function($){
 	// END - SCROLL TO TOP BUTTON
 	/////////////////////////////////
 
+	if ($("#contact-page")) {
+		$("#MainContent").css('padding-top', '0');
+	}
+
 };
 
 /* If jQuery has not yet been loaded or if it has but it's too old for our needs,
